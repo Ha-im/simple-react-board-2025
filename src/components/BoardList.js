@@ -65,7 +65,7 @@ const BoardList= ({setmodify}) =>{
       return;
      }
     let boardIdList = checkList.join(); //현재 checkList는 배열이기때문에 배열->문자열로 바꿈[1,2,3]->1,2,3
-    axios.post('http://localhost:8000/delete',{boardIdList})// 중괄호로 감싸줘야 넘어간다 객체 구조로 들어가야한다.
+    axios.post('http://34.47.117.15:8000/delete',{boardIdList})// 중괄호로 감싸줘야 넘어간다 객체 구조로 들어가야한다.
     .then((res) =>{
       // 성공 핸들링
       alert('삭제 완료');
@@ -80,7 +80,7 @@ const BoardList= ({setmodify}) =>{
   }
 
   const getList = useCallback(()=>{
-    axios.get('http://localhost:8000/list')
+    axios.get('http://34.47.117.15:8000/list')
     .then((res) =>{
       // 성공 핸들링
       console.log(res.data);

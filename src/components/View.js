@@ -9,7 +9,7 @@ const View = ()=>{
   //SELECT * FROM BOARD WHERE BOARD_ID = ID
 
   useEffect(()=>{
-    axios.get(`http://localhost:8000/detail?id=${id}`)
+    axios.get(`http://34.47.117.15:8000/detail?id=${id}`)
     .then((res) =>{
       // 성공 핸들링
       console.log(res.data);
@@ -32,7 +32,7 @@ const View = ()=>{
       <div>{board.content}</div>
       {board.image_path && 
         <div className="attachment">
-          <img src={`http://localhost:8000/${board.image_path}`} alt=""/>
+          <img src={`http://34.47.117.15:8000/${board.image_path}`} alt=""/>
         </div>
       }
       <hr/>
